@@ -8,6 +8,8 @@ import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/pedidos_screen.dart';
 import 'screens/pedido_form_screen.dart';
+import 'screens/itens_screen.dart';
+import 'screens/item_form_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -19,6 +21,10 @@ class App extends StatelessWidget {
       telaInicio: const HomeScreen(),
       telaPedidos: const PedidosScreen(),
       telaNovoPedido: const PedidoFormScreen(),
+      telaEditarPedido: (id) => PedidoFormScreen(pedidoId: id),
+      telaItens: const ItensScreen(),
+      telaNovoItem: const ItemFormScreen(),
+      telaEditarItem: (id) => ItemFormScreen(itemId: id),
     );
 
     return MaterialApp.router(
